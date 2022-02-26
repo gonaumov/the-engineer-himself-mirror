@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/shtirlitz/shtirlitz1.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+<head>
+<title>Частни случаи за работа с Кирилица</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<META content="Конвертиране Латиница към Кирилица и обратно с настройваемо съответствие.
+	  Преобразуване на текстове WIN-MIC за четене и печат. Комплект инструменти за работа
+	  с Български ДОС програми"
+	  name=description>
+<META content="Genadi Atanasov,Atanasov,Bulgaria,botevgrad,bulgarian,injinera,free,
+	keyboard driver,DOS Prompt,Command Prompt,Bulgarian Cyrillic,Windows XP,Windows 95,
+	Windows 98,Windows Me,MIC CODEPAGE,MIK CODEPAGE,безплатно,клавиатура,клавиатурна подредба,
+	Кирилица,кирилизация,Българска Кирилица,Печат под DOS,Ботевград,Генади Атанасов,Атанасов,аванта,гювеч"
+	name=keywords>
+<META content="Частни случаи за работа с Кирилица" name=Title>
+<META content="Генади Атанасов" name=Author>
+<META content="1st Page 2000, TextРad" name=GENERATOR>
+<META content="Български" name=Language>
+</HEAD>
+
+
+<BODY BGCOLOR=#F3FCFC TEXT=#000000 LINK=#0000FF VLINK=#0000FF ALINK=#FF0000>
+<A NAME="top"></A>
+<FONT FACE=Arial,Tahoma>
+
+<!-- HEAD  Table   BEGIN -->
+<TABLE ALIGN=CENTER WIDTH=100% BORDER=0 cellPadding=0 cellSpacing=0>
+<TR><TD BGCOLOR=#CB901F ALIGN=CENTER><FONT SIZE=-1 COLOR="#000005">
+Сайта е на инженер Генади Атанасов</FONT></TD></TR>
+</TABLE><!-- HEAD  Table   end -->
+
+<BR>
+<TABLE ALIGN=CENTER WIDTH=90% BORDER=0 cellPadding=10 cellSpacing=0>
+<TR><TD>
+ <FONT COLOR=RED>
+ <center><B>Частни случаи за работа с Кирилица - Български ДОС</B>
+ </center></FONT><BR>
+</TD></TR>
+</TABLE>
+
+<TABLE ALIGN=CENTER WIDTH=90% BORDER=0 cellPadding=10 cellSpacing=0>
+<TR><TD>
+<P>
+<a href="../realdos/dos_bg.htm">Kъм теоретичните обяснения "Що е Кирилица под DOS"</a>
+<P> &nbsp;<P>
+<FONT COLOR=#0000A0>
+<center><B>На тази страница:</B></center>
+<OL>
+<B><li>Щирлиц 4 настроен за Българи. <a href="shtirlitz1.htm#STRLC">---></a></B><br>
+<ul>
+<li>Разкодиране от джинджифлютки към Кирилица</li>
+<li><B>Конвертиране Латиница към Кирилица и обратно с настройваемо съответствие.</B></li>
+<li>Преобразуване на текстове WIN-MIC за четене и печат.</li>
+</ul>
+</li>
+<P>
+<B><li><a href="shtirlitz1.htm#BULMIC">Комплект инструменти за работа с Български ДОС програми</a></B>
+&nbsp;Печат на ДОС файлове с нестандартната МИК кодировка на Windows принтер - лазерен или мастилен.
+Подкарване на Български DOS програми без разръчкване на Windows-а, версии 95 до XP<br>
+<ul>
+<li>Кирилизатор за конзола Bds2_1.com</li>
+<li>Тъп преобразувател  WIN <--> MIC - само 4K програма Win2Mik.EXE</li>
+<li>Указания за работа с TextPad</li>
+</ul>
+</li>
+<P>
+<B><li>Пълна конверсия на текстов файл, включително псевдографичните знаци и печат на
+произволен принтер. <a href="shtirlitz1.htm#DOSPRN">---></a></B><br>
+<ul>
+Посредством програмата DOSPRN
+</ul>
+</li>
+<P>
+</OL>
+<P><A NAME="nonstd">
+<hr size="3" width="80%" noshade>
+</FONT>
+</TD></TR>
+
+<TR><TD HEIGHT=40></TD></TR>
+<TR><TD>
+Написаното на страницата <a href="../fastchn/fastlocalech.htm">"Поддръжка на език на
+системно ниво"</a> <b>е валидно, но не за България,</b> понеже нашите
+DOS програми не работят с някоя от стандартните кодови таблици, дори и
+стандарта да е БДС. <b>Използваната у нас МИК кодова таблица е <a
+href="../public1/statia1.htm#MIC">нестандартна.</a></b> За България Windows-а
+има поддръжка по една от кодовите таблици с Кирилица - CodePage855. Тя служи
+само за показно - ей това щяхте да имате, ако с кирилизацията за България на
+Windows се занимаваха нормално интелигентни хора, а не
+<a href="../public1/maybethink.htm">"специалисти"</a>
+</TD></TR>
+<TR><TD HEIGHT=50></TD></TR>
+
+<TR><TD><A NAME="STRLC"></A><HR>
+<FONT COLOR=#0000A0><B>За Щирлиц версия 4.01 &nbsp;</B></FONT>
+Щирлиц е  програма, способна да разкодира и доведе до читаем вид всяко нещо, което е
+било на Кирилица и после се е объркало. Просто <b>щракате на иконата с ключето.</b> Но според
+принципа "Всеки гледа първо мене си" автора и Всеволод Лукянин я е настроил като за
+Руснаци. Нестандартната Българска ДОС кодова таблица MIC я има, но не е чекната да
+се използува при конверсиите. При Lat&nbsp;<-->&nbsp;Cyr конверсиите няма българска
+фонетична, при която:<br>
+<b>` = ч &nbsp; &nbsp; &nbsp; ~ = Ч &nbsp;&nbsp;&nbsp;&nbsp;
+[ = ш &nbsp; &nbsp; &nbsp; { = Ш &nbsp;&nbsp;&nbsp;&nbsp;
+] = щ  &nbsp; &nbsp; &nbsp; } = Щ</b>
+<P>
+Програмата е безплатна за некомерсиални цели и разпространение в непроменен вид, може
+да вади интерфейс на Български. Затова ви предлагам комплект от оргигиналния инсталационен
+файл на Щирлиц и два от файловете, където са му настройките и които са от мен. Инсталирайте
+<b>в която директория ви е кеф</b> и после риплейснете <b>Shtirlitz.cfg</b> и
+<b>Shtirlitz.dat</b> с мойте.
+<P>
+</TD></TR>
+<TR BGCOLOR=#CB901F><TD>
+<P>
+<b><a href="http://free.hit.bg/injinera/downloads/shtirlitz.rar">Щирлиц 4.01 и Българските настройки (702KB)</a></b>
+</TD></TR>
+
+<TR><TD HEIGHT=20></TD></TR>
+
+<TR><TD><BR>
+<FONT COLOR=#0000A0><B>Как да работим с Щирлиц с мойте настройки.</B></FONT>&nbsp;&nbsp;&nbsp;
+Трябва <b>Параметри, Декодиране при зареждане</b>&nbsp; да е отчекнато. Текста за
+конверсия може да попадне в Щирлиц като файла се отвори с Щирлиц или като го копнем
+и после го пейстнем. <br>
+Конверсията става, като натиснем иконата, отговаряща на  "ОТ", държим бутона натистат
+и влачим до иконата, отговаряща на  "КЪМ" Ето примера за транслитерация, от и към:
+</TD></TR>
+
+<TR><TD HEIGHT=10></TD></TR>
+</TABLE>
+
+<TABLE  BORDER=0 ALIGN="CENTER">
+<TR ALIGN="CENTER"><TD>
+<img src="1a/paste.png" width="465" height="175"
+alt="картинка - пействаме текст в прозореца на Щирлиц" border="0">
+</TD>
+<TD WIDTH=10></TD>
+<TD>
+<img src="1a/convert1.png" width="465" height="177" &nbsp;
+alt="картинка - текста е пейстнат" border="0">
+</TD></TR>
+<TR Height=20><TD COLSPAN=3> </TD></TR>
+
+<TR ALIGN="CENTER"><TD>
+<img src="1a/convert2.png" width="464" height="175"
+alt="картинка - натискаме бутон Win и после Lat" border="0">
+</TD>
+<TD WIDTH=10></TD>
+<TD>
+<img src="1a/convert3.png" width="465" height="175"
+alt="картинка - текста е конвертиран" border="0">
+</TD></TR>
+<TR Height=20><TD COLSPAN=3> </TD></TR>
+
+<TR ALIGN="CENTER"><TD>
+<img src="1a/convert4.png" width="464" height="174"
+alt="картинка - натискаме бутон Lat и после Win"  border="0">
+</TD>
+<TD WIDTH=10></TD>
+<TD>
+<img src="1a/convert5.png" width="464" height="177"
+alt="картинка - текста е конвертиран" border="0">
+</TD></TR>
+</TABLE>
+
+
+<TABLE WIDTH=90% BORDER=0 ALIGN="CENTER">
+<TR><TD HEIGHT=10></TD></TR>
+<TR><TD>
+На това безименният народен гений му вика "Ори, мели, яж!", но заради търсачките
+му слагам име:
+</TD></TR>
+<TR><TD HEIGHT=10></TD></TR>
+
+<TR><TD>
+<FONT COLOR=#0000A0><B>Конвертиране Латиница към Кирилица и обратно с настройваемо
+съответствие чрез Щирлиц</B></FONT>
+<br>
+Това дето е на картинките по-горе е по искане на нашенец, студент в Германия. На
+университетските компютри под NT4 админа им е приложил <b>"Нихт пипен, кайне булгарише
+ клавиатурен, нихт мамата"</b>. Флекс Конверта на Датекс не може да се пренастрои за описаните по-горе
+съответствия (сещам се за мисълта на един познат, че ако някой не става за дадена работа,
+той най-вероятно не става за никаква работа, малко вероятно е да си е сбъркал професията).
+Щирлиц обаче работи без проблем. Може да се добави <B>собствена конверсия, както аз направих,
+</B> единствената особеност е, че трябва да са описани 61 или 62 букви, иначе Щирлиц
+проявява собствено мнение за малки и голями букви.
+<BR><P>
+</TD></TR>
+
+<TR><TD HEIGHT=10></TD></TR>
+
+<TR><TD>
+<FONT COLOR=#0000A0><B>Печат на ДОС файлове с нестандартната МИК кодировка на Windows
+принтер - лазерен или мастилен, вариант 1.</B></FONT>
+<br>
+Едно от решенията е да не печатаме направо от програмата, а да и изберем Print to File
+след което на файла да му направим конверсия MIC --> Win. Това може да стане чрез Щирлиц
+както е показано на картинките. Сейваме файла под друго име (програмата може да си търси
+оригиналният файл с оригиналната кодировка, нека си стои) и после може да го разпечатим.
+<BR><P>
+<img src="1a/winmic1.png" width="594" height="175"
+alt="картинка - Щирлиц, отворил текст на джинджифлютки" border="0">
+<P>
+<img src="1a/winmic2.png" width="594" height="175"
+alt="картинка - текста е прекодиран" border="0">
+<P>
+Най -добре е да работим с чисто преинсталиран Windows, за да е сигурно, че сме махнали
+кирилизатора окончателно. <b>Съобщенията на кирилизаторите, че се деинсталират успешно са
+чиста лъжа.</b> Българската програмата, искаща MIC кодова таблица &nbsp; &nbsp;
+<big><b>се пуска на цял екран</b></big> &nbsp; &nbsp;
+чрез BAT файл, който преди нея пуска <b>Bds2_1.com - муцка кирилизатор за конзола от V. Valev</b>.
+Действа само в тази конзола, където е зареден, след затварянето и - все едно, че го е нямало.
+Примера е от Wd.exe, същото става и с програмата за ДДС -Dnevnici.EXE и с Ажур. Ако има кирилизатор,
+той само пречи. Прясно преинсталираният Windows без кирилизатор си вижда Кирилицата навсякъде без
+проблем, включително и по мрежата, а старите дето са осрани с Флекс Тайп - не. Поради известният
+дефект на Флекс Тайпа, че при преинсталация на Windows някои файлове стават недостъпни, старите
+не смеем да ги пипаме. (не го бъркай, че ще замирише още по-силно)
+<P>
+</TD></TR>
+
+<TR><TD BGCOLOR=#BBFFBB>
+<BR>
+<FONT COLOR=RED SIZE=+1><center><B>За Бога братя, не опитвайте наркотици или кирилизиращи програми,
+отърваването е много трудно!
+</B></center></FONT><BR><BR>
+</TD></TR>
+
+<TR><TD BGCOLOR=#BBFFBB><A NAME="BULMIC"></A>
+<big><b>Комплект инструменти за работа с Български ДОС програми. Баш вариант за печат</b></big>
+<P>
+<a href="../na4alo.htm#Provereno">Проверено</a> с Ажур под Win95 и Win98SE
+<P>
+Краен резултат - иглените принтери се пускат само за печат на платежни нареждания.
+<P>
+Инструменти:
+<ul>
+<li><b><U>Bds2_1.com</b> - Cyrillic keyboard driver & CGA/EGA/VGA font handler v2.1 (Jun 1995)</U>
+<br>
+от V. Valev Това е кирилизатор с МИК кодова таблица и клавиатурен драйвер с БДС и фонетична.
+Работи в ДОС прозорец под Windows (95 до XP), но <b>само за прозорец, разпънат на цял екран</b>
+чрез натискане на Alt-Enter. Освен Ажур вади Кирилица и на Dnevnici.exe, WD.exe, вероятно
+и на други подобни. Включил съм го заедно с текстови файл с обяснение. Bds2_1.com най-рядко създава
+проблеми от подобните програми, но при нужда може да ползвате и друг.</li>
+<P>
+<li><b>Win2mik.exe</b> от Григор Гачев, М.Д. и Ф.Д.
+<PRE>Windows (ANSI) <--> MIK ASCII Cyrillic Charset Convertor
+(C) 1997, Grigor Gatchev, M.D, Ph.D. No rights reserved.
+</PRE>
+Това безплатна програма проста като отварачка за бира. Работи на принципа "Ти го правиш, то се лее".<br>
+Слага се някъде, най-добре в <b>...\NePipai</b> или в <b>...\User</b> . Прави и се шорткът,
+зачеква му се Close on exit и се слага в SendTo. Цъкаме дясно на файла с данните, от менюто избираме
+SendTo Win2mik.exe. Мигва и изгасва черно екранче и готово. Файла вече не е на джинджифлютки, можем да го
+разпечатаме. Да, обаче така за Ажура е на джинджифлютки. Нема проблем -  още веднъж SendTo Win2mik.exe и той се
+прекодира пак. Трепач! Григор Гачев дори не трябва да пише лозунга "Обичам хубавите работи" - то си е
+ясно.<P>
+</li>
+<li><A NAME="TEXTPAD"></A>
+<b>TextPad 4.4.1</b> или по-нов.<P>
+Текстови редактор <b>истинска 32 битова версия.</b> Който ползва клавишните комбинации на M$ Word ще му пасне
+веднага. Маркиран текст може да се влачи с мишката (Move, а при натиснат Ctrl - Copy) в един или в два
+документа -гребвате от единя и пускате в другия. Може да отвори няколко файла по няколко мегабайта, има
+безупречна Windows-ка Кирилица. Настройват му се фонтовете отделно за екрана и за принтера,
+<b>има Page Setup и Print Prewiew.</b>
+През Configure - Preferences -Document clases -Default - Font се настройва така:<br><P>
+<img src="1a/TextPad1.png" width="516" height="348" alt="TextPad настройки" border="0">
+<P>
+Качва му се фонт Courier New със скрипт Cyrillic. За екрана
+се избира 10 или 11 Pt, <b>а за принтера 11 Pt за страници с Нормал и 6 Pt за кондензед</b>.
+Пеидж сетъпа е: лист А4 Portrait, Top, Bottom, Right по 0.5см Left 2.6 см. Това понася на повечето
+лазерни принтери, мастилените може да искат по-голямо Top.<P> Внимание! Courier New (Cyr) e
+някаква измислица и най- добре го изтрийте. Истинският Майкрософтски фонт е Courier New
+<P>
+TextPad се точи откъдето го намерите. (www.google.com търсене на textpad.exe download) Нерегистрираната
+версия досажда с начален екран "дай парите, мерси не пием", но си работи O.K.
+<P>
+За тази страница допринесоха и Антон Александров, Даниела Тинева и Ангел Узунов. Те пробваха написаното
+и дадоха отзив "това ни трябваше"
+</li>
+</ul>
+</TD></TR>
+<TR BGCOLOR=#CB901F><TD>
+<P>
+<b> <a href="http://free.hit.bg/injinera/downloads/Bds2_1.rar">Bds2_1.com, файл с допълнителни указания и Win2mik.exe (19KB)</a></b><BR>
+</TD></TR>
+<TR HEIGHT=30><TD></TD></TR>
+
+<TR><TD>
+<A NAME="DOSPRN"></A>
+<big><b>Пълна конверсия на текстов файл, включително псевдографичните знаци и печат на произволен принтер.</b></big>
+<P>Ново от Януари 2004 година.
+<P> &nbsp;<P>
+<B>Прочитате</B> обяснението как да си качите
+<a href="http://free.hit.bg/injinera/realdos/dos_prn.htm">DOSPRN</a>
+и да му добавите необходимата конверсия за българския ДОС. &nbsp;
+<B>Правите го.</B> После е лесно - трябва просто да метнете преименувано копие на файла там,
+откъдето <B>DOSPRN</B> ще го отпечата. По дефолт - на: <BR>
+C:\PRNSPL <P>
+
+За целта си правите скриптче <B>ТоDOSPRN.BAT</B> Примерно:<P>
+<PRE>
+@echo off
+rem copy textfile to C: and rename to PRNSPL
+rem Read DOSPRN Help
+IF EXIST C:\PRNSPL GOTO EXIST
+copy %1 C:\PRNSPL
+EXIT
+:EXIST
+ECHO File C:\PRNSPL alreadi exist. Break operation
+exit
+
+</PRE>
+Правите шорткът на ТоDOSPRN.BAT и го слагате в <B>SendTo</B>.
+Цъкате дясно на проблемния текстови файл с българска ДОС кодировка и избирате<BR>
+<B>SendTo - ТоDOSPRN</B><P>
+Това е! Файла се отпечатва прекодиран на принтера, който е избран в <B>DOSPRN</B>
+
+
+</TD></TR>
+
+
+
+
+
+<TR HEIGHT=50 BGCOLOR=#BBFFBB><TD>
+Моля, не ми пращайте въпроси "Имам един стар принтер..." Това, че сте скръндзи не може да е мой проблем. Sorry.
+</TD></TR>
+
+<TR HEIGHT=20><TD></TD></TR>
+<TR><TD>
+<a REL=START href="../na4alo.htm">^ Начало на сайта ^</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a REL=PREV href="../dloadmnu.htm"><--Предната страница - Меню за точене </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a REL=PREV href="shtirlitz1.htm#top"> ^ горе ^</a>
+
+<BR><P>
+
+
+<!-- Web Counter code start -->
+<font size=1><script type="text/javascript" language="javascript"><!--
+_d=document; _n=navigator; _t=new Date(); function t() { _d.write(
+"<img src=\"http://counter.search.bg/cgi-bin/c?_id=injinera&_z=0&_r="+
+_r+"&_c="+_c+"&_j="+_j+"&_t="+(_t.getTimezoneOffset())+"&_k="+_k+
+"&_l="+escape(_d.referrer)+"\" width=70 height=15 "+
+"border=0>");} _c="0"; _r="0"; _j="U"; _k="U"; _d.cookie="_c=y";
+_d.cookie.length>0?_k="Y":_k="N";//--></script>
+<script type="text/javascript" language="javascript1.2"><!--
+_b=screen; _r=_b.width; _n.appName!="Netscape"?_c=_b.colorDepth : _c=_b.pixelDepth;
+_n.javaEnabled()?_j="Y":_j="N";//--></script>
+<a href="http://counter.search.bg/cgi-bin/s?_id=injinera"
+target="_top"><script type="text/javascript" language="javascript"><!--
+t(); //--></script><noscript><img width=70 height=15 border=0 alt=""
+src="../../../counter.search.bg/cgi-bin/cda6b.gif%3F_id=injinera&amp;_z=0"></noscript></a></font>
+<!-- Web Counter code end -->
+
+</TD></TR>
+
+<TR><TD>
+<BR><P><hr>
+Направено на 6 Януари 2002&nbsp;&nbsp;&nbsp;&nbsp;Последна корекция на 11 Януари 2004
+</TD></TR>
+<TR HEIGHT=40><TD></TD></TR>
+
+</TABLE>
+</FONT>
+</body>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/shtirlitz/shtirlitz1.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+</html>

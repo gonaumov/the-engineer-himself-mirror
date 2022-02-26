@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Saved from free.hit.bg/injinera -->
+<html>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/divotii/ubd.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+<head>
+ <title>Коментар за UBD стартовите дискети</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <META content="Коментар за UBD стартовите дискети" name=Title>
+ <META content="Генади Атанасов" name=Author>
+ <META content="1st Page 2000,TextРad" name=GENERATOR>
+ <META content=Български name=Language>
+</HEAD>
+<FONT FACE="Arial,Tahoma">
+
+<BODY BGCOLOR=#BBFFBB TEXT="#000000" LINK="#0000FF" VLINK="#0000FF" ALINK="#FF0000">
+
+<!-- HEAD  Table   BEGIN -->
+<TABLE ALIGN=CENTER WIDTH=90% BORDER=0 cellPadding=0 cellSpacing=0 BGCOLOR=#CB901F>
+<TR>
+ <TD  ALIGN=CENTER><FONT SIZE=-1 COLOR="#000005">
+	Сайта е на инженер Генади  Атанасов </FONT>
+ </TD>
+</TR> </TABLE>  <!-- HEAD    Table END -->
+
+<TABLE ALIGN=CENTER WIDTH=90%>
+<TR HEIGHT=15><TD></TD></TR>
+<TR>
+ <TD><FONT SIZE=+2>
+ <center><B>Коментар за UBD стартовите дискети</B></center></FONT>
+ <hr width="80%"></TD>
+</TR>
+<TR HEIGHT=15><TD></TD></TR>
+<TR><TD>
+Без мощна стартова дискета или стартиращо CD с добър стартов имидж (най добре с няколко)
+пред отказалия да стартира компир човек е като без ръце. От доста време имам такива и като
+се закучи съвсем, стартирам от нея (него) и казвам: "Ти ли ш'ми се гевезиш? Сега ти
+разказах играта".
+
+</TD></TR>
+
+<TR><TD>
+Преди това си бях наточил UBD стартовите дискети и ги опитах. Те имат едно безспорно
+качество: съставени са от безплатни компоненти. На което Българинът веднага отговаря:
+е, та? Не е там проблема, естествено. Проблема е, че те предлагат графичен шел, през
+който може да се пусне дори Fdisk. Когато стигнах до това откритие, веднага ги
+преформатирах. Fdisk през шел е като вица, дето кьоравия карал мотор по указания на тепавия.
+Ако някой не може да работи през интерфейса на Fdisk, значи просто не трябва да работи!
+Няма гинекология за начинаещи или управление на самолет, без да си пилот.
+<B>Не препоръчвам на никого UBD дискетите!</B>
+
+
+</TD></TR><TR HEIGHT=15><TD></TD></TR>
+<TR><TD>
+
+	<table align=Center><tr><td>
+<BIG><center><B>
+UBD дискетите са особено противопоказни за не-Американци!
+</B></center></BIG>
+</td></tr>
+</table>
+
+</TD></TR><TR HEIGHT=15><TD></TD></TR>
+<TR><TD>
+Налага се да направя <A NAME="ukazanie">едно</A>
+<BIG><B>съкратено указание за това, как се сетъпва Уиндоус 9ХХ.</B></BIG>
+Първо, задължително се гледа за файл MSBath.INF в директорията, където е Setup.exe
+<BR><BR><center><B>
+За Уиндоус 9ХХ сетъпа Msbatch.inf е това, което е Autoexec.BAT за ДОС-а.</B></center>
+<BR>
+Това има как да се заобиколи, като на сетъпа му се посочи друг .INF фаил, с верни настройки.
+Това става така:
+<BR><BR><center><B>
+setup ЦелиятПът\ИМЕ.inf &nbsp;&nbsp; /IW &nbsp;&nbsp; /iv&nbsp;&nbsp; /ie</B></center>
+<BR>
+Пример: Имате евтин OEM 98, дето упорито се инсталира без да пита за нищо с настройки
+USA без грам Кирилица. Нямате вяра на инж<B>и</B>нери и техните едноредови команди.
+Тогава копирате  Msbatch.inf от CD-то на C:\, поправяте го и сетъпвате със следната команда:
+<BR><center>
+setup &nbsp;C:\Msbatch.inf &nbsp;&nbsp;/IW &nbsp;/iv&nbsp; /ie<center>
+<P>
+Забележка: обяснявам за най- сложния случай, когато се сетъпва направо от CD-то. Ако сте
+откопирали инсталационните файлове на диска, просто преправете Msbatch.inf.
+<HR><BR>
+<big><b>Ето кое се поправя:</b></big>
+<table bgcolor="ffffff" BORDER=1 CELLPADDING=5>
+<tr><td>[Setup]</td>
+   <td></td>
+</tr>
+<tr>
+   <td>
+   Express=1
+   </td>
+   <td><b>Express=0 ; &nbsp;&nbsp; ИНАЧЕ НЕ ПИТА!!!</b></td>
+</tr>
+<tr>
+   <td>EBD=1</td>
+   <td>EBD=0 ; &nbsp;&nbsp; да ви не досажда за дискета</td>
+</tr>
+
+<tr>
+   <td>ChangeDir=1</td>
+   <td>ChangeDir=0 ; &nbsp;&nbsp; Дава да се избере в коя директория да се инсталира, освен на C:\Windows</td>
+</tr>
+
+
+<tr>
+   <td>ShowEula=1</td>
+   <td>ShowEula=0 ; &nbsp;&nbsp;да ви не досажда с лицензното споразумение, /IW е за същото</td>
+</tr>
+<tr>
+   <td>ако липсва</td>
+   <td>ProductKey="12345-ABCDE-12345-ABCDE-12345" ; тук пишете вашият номер
+   или класическото ка 4 ха ве де...</td>
+</tr>
+<tr><td>[System]</td>
+   <td></td>
+</tr>
+<tr>
+   <td>Locale=каквото и да е</td>
+   <td><b>Locale=L0402 ;Bulgaria!!!</b></td>
+</tr>
+<tr>
+   <td>SelectedKeyboard=каквото и да е </td>
+   <td>SelectedKeyboard=KEYBOARD_00000409 ; иначе ви се разбърква латиницата</td>
+</tr>
+</table>
+
+</TD></TR>
+<TR HEIGHT=20><TD></TD></TR>
+<TR><TD>
+При Ме това е коригирано, той не се съобразява с Msbatch.inf. Освен ако изрично
+не му посочим фаил с точният път.
+<b>Точно това правят UBD дискетите: сочат на сетъпа
+файл  с настройки, които са само за Американец, при това с Express=1</b>
+<P>
+<P>
+ <A href="../na4alo.htm">^ начало на сайта ^</A>
+ &nbsp;&nbsp;&nbsp;&nbsp
+
+ <A href="div1.htm#gyuvech2">меню "Още гювечи от Инжинера" --></A>
+ &nbsp;&nbsp;&nbsp;&nbsp; 
+
+<!--Start FreeCounter code! -->
+<script language="javascript">
+
+var r=document.referrer
+var bv=navigator.appVersion
+if(navigator.appName=="Microsoft Internet Explorer"){pos=bv.lastIndexOf('.');bv=bv.substring(pos-1,bv.length)}
+bv=parseFloat(bv)
+var n=escape(navigator.appName+' '+bv)
+var p=escape(navigator.platform)
+var sw=screen.width+'x'+screen.height
+var sd=screen.colorDepth
+document.write('<a href=http://www.freecount.co.uk/counter/t-stats.php?i=774 target=new><img src=http://www.freecount.co.uk/counter/counter.php?i=774&r='+r+'&n='+n+'&p='+p+'&sw='+sw+'&sd='+sd+' border=0></a>')
+
+</script>
+<!--End FreeCounter code! -->
+
+&nbsp;
+
+<!-- Web Counter code start -->
+<font size=1><script type="text/javascript" language="javascript"><!--
+_d=document; _n=navigator; _t=new Date(); function t() { _d.write(
+"<img src=\"http://counter.search.bg/cgi-bin/c?_id=injinera&_z=0&_r="+
+_r+"&_c="+_c+"&_j="+_j+"&_t="+(_t.getTimezoneOffset())+"&_k="+_k+
+"&_l="+escape(_d.referrer)+"\" width=70 height=15 "+
+"border=0>");} _c="0"; _r="0"; _j="U"; _k="U"; _d.cookie="_c=y";
+_d.cookie.length>0?_k="Y":_k="N";//--></script>
+<script type="text/javascript" language="javascript1.2"><!--
+_b=screen; _r=_b.width; _n.appName!="Netscape"?_c=_b.colorDepth : _c=_b.pixelDepth;
+_n.javaEnabled()?_j="Y":_j="N";//--></script>
+<a href="http://counter.search.bg/cgi-bin/s?_id=injinera"
+target="_top"><script type="text/javascript" language="javascript"><!--
+t(); //--></script><noscript><img width=70 height=15 border=0 alt=""
+src="../../../counter.search.bg/cgi-bin/cda6b.gif%3F_id=injinera&amp;_z=0"></noscript></a></font>
+<!-- Web Counter code end -->
+
+</TD></TR>
+
+<TR HEIGHT=20><TD><HR></TD></TR>
+
+</TABLE>
+
+<table width="85%"><tr>
+<td><div align="left"><small>написано на 18 Ноември 2001</small></div></td>
+<td width="5%"></td>
+<td><small>корекция на 19 Януари  2002</small></td>
+</tr>
+</table>
+
+</TD>
+</TR></TBODY>
+</TABLE>
+
+</FONT>
+</body>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/divotii/ubd.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+</html>

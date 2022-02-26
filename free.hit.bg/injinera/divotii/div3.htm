@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Saved from free.hit.bg/injinera -->
+<html>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/divotii/div3.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+<head>
+ <title>Работа с PARTITION MAGIC - проверено на практика</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <META content="Работа с PARTITION MAGIC - проверено на практика" name=Title>
+ <META content="Генади Атанасов" name=Author>
+ <META content="1st Page 2000,TextРad" name=GENERATOR>
+ <META content=Български name=Language>
+</HEAD>
+<FONT FACE="Arial,Tahoma">
+
+<BODY BGCOLOR=#BBFFBB TEXT="#000000" LINK="#0000FF" VLINK="#0000FF" ALINK="#FF0000">
+
+<!-- HEAD  Table   BEGIN -->
+<TABLE ALIGN=CENTER WIDTH=100% BORDER=0 cellPadding=0 cellSpacing=0 BGCOLOR=#CB901F>
+<TR>
+ <TD  ALIGN=CENTER><FONT SIZE=-1 COLOR="#000005">
+	Сайта е на инженер Генади  Атанасов </FONT>
+ </TD>
+</TR> </TABLE>  <!-- HEAD    Table END -->
+
+<TABLE ALIGN=CENTER WIDTH=90%>
+<TR HEIGHT=15><TD></TD></TR>
+<TR>
+ <TD><FONT SIZE=+2>
+ <center><B>Работа с PARTITION MAGIC - проверено на практика</B></center></FONT>
+ <hr width="80%"></TD>
+</TR>
+<TR HEIGHT=15><TD></TD></TR>
+<TR><TD>
+Всичко писано в PC WORLD БЪЛГАРИЯ 12/2001, стр 27, от заглавието <BR>
+<font color="#998800"><b>1. ИНСТАЛАЦИЯ НА PARTITION MAGIC</b></font> <BR>
+натам показва, че е опасно да си читател на компютърни списания. Ще те съветват хора,
+които не са се опитвали на практика да следват собствените си съвети, за да видят как
+при точното им спазване ще си съсипят диска. <b>Описанието за това, как да работим с
+PARTITION MAGIC е вярно само за частният случай, когато диска ни се вижда докрая от
+BIOS-а на компютъра.</b> Такива дискове в момента има само на старо.
+Изложението по - надолу може да се озаглави и "Съветите на препатилия"
+</TD></TR>
+
+<TR HEIGHT=15><TD></TD></TR>
+
+<TR><TD>
+Да караме подред.
+<ol>
+<li> Инсталацията. Най- добре е да си го доинсталираме, като го доведем до преместваем
+вид и си го сложим на CD-то с любимата ни софтуерна колекция и си го пускаме направо
+от там. PARTITION MAGIC не зависи от никакви записи в регистрито, само си слага
+един файл &nbsp;&nbsp;<b>PQVXD.vxd</b> &nbsp;&nbsp;във %WINDIR%\System. Достатъчно
+е да го преместим при Pmagic9x.exe в поддиректорията &nbsp;&nbsp; \WIN9X &nbsp;&nbsp;
+и ще получим PQM който може да се разнася като пръскачка из лозе. А ако сложим там и
+Mlang.dll от Windows 98, ще може да го стартираме и под 95 - първа версия.
+</li><P>
+<li> PARTITION MAGIC работещ под Windows, без да излиза за изпълнение на командата
+под DOS може да дели дискове без значение дали се виждат докрая от BIOS-а на компютъра.
+Това е препоръчителният режим, гарантирано се постига, като диска дето ще делим, го
+закачим като втори например в чекмедже.
+</li><P>
+<li><b>Диска трябва да работи с 32-битовите Windows-ски драйвери или с други думи, в
+Дивайс мениджъра не трябва да има удивителни на диска и(ли) на IDE контролерите.</b>
+БутСекторните вируси също водят до такава удивителна.
+</li><P>
+<li>Ако се налага да се работи под DOS, <b>не давайте на PARTITION MAGIC да излиза под
+DOS и да се опитва да прилага измененията</b>. Излезте си под DOS и си пуснете DOS варианта.
+За предпочитане е варианта на PQM5, той може да обработва дялове (или празно) намиращи се
+изцяло във видимата под BIOS част. PQM6 и PQM7 вариантите просто отказват да отворят дискове,
+които не се виждат докрая от BIOS. Ако имате съмнение дали дяла се вижда изцяло, пуснете
+му "Check partition for Erors". На границата на видимостта компютъра забива. Жална ви майка
+ако сте дали на PQM да излезе под DOS и да се опита да прави нещо по този дял!
+</li><P>
+<li>Ако вече имате дялове и мултибут и желаете да си промените нещо по диска, трябва да
+изберете старт от подходящ дял, за да може PQM да работи без да иска да излиза под DOS.
+Правилата са следните: <P>
+- Не може да се дели дяла, от който сме стартирали или на който е SWAP файла на Windows<br>
+- Не може да се дели дяла, от които сме стартирали PQM. Ето смисъла на съвета да се стартира
+от CD<br>
+- Не може да се дели дяла, от който са заредени някакви DLL-и в паметта, например където е
+WinRAR или NortonAntivirus.<P>
+<li>Ако следвате съвета, че не <b>трябва да давате на PARTITION MAGIC да излиза под DOS и
+да се опитва да прилага измененията</b> не е пречка да работите с PQM5 под Windows Me.
+Проблема на Ми-то е липсата на кадърен DOS така, че не обръщайте внимание на предупреждението
+и си работете.
+</li><P>
+<li>Ако нямате съмнения в годността на диска, цъкнете на <b>General, Preferences</b> и зачекнете
+<b>Skip bad sector checks</b> за този диск. Работите ще стават много по-бързо. Проверката за
+лоши сектори е смислена само ако имате диск със съмнителна годност.
+</li>
+<li>Пробвах версията от диска към списанието, пълна е и работи, но извадих последния съвет:
+<b>Работете с версия, чиито език разбирате!</b>
+</li>
+</ol>
+</TD></TR>
+
+<TR HEIGHT=15><TD></TD></TR>
+
+<TR><TD>
+<Big>
+<center><B>Сега малко и за Линуксите</B></center></Big>
+<P>
+<b>Най отвратителната при инсталация операционна система е Red Hat Linux.</b> Абсолютно
+без всякакво предупреждение, ако изберете при инсталацията нещо различно от Custom,
+Линукса ще се опита да ви дели диска на дялове изхождайки от предположението, че имате
+само един първичен дял. Ако това не е така, настава мазало по диска.<P>
+Това по безочие и нахалство надминава дори Датекса (моят еталон за нахална неграмотност)
+които не предупреждават за недъгавостта на деинсталиращата процедура на Флекс Тайп 2k.
+<P>
+ <A href="../na4alo.htm">^ начало на сайта ^</A>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+
+ <A href="div1.htm#gyuvech2">меню "Още гювечи от Инжинера" --></A>
+ &nbsp;&nbsp;&nbsp;
+
+</TD></TR>
+
+<TR HEIGHT=10><TD><HR></TD></TR>
+</TABLE>
+
+<table ALIGN=CENTER width="85%"><tr>
+<td>
+<!-- Web Counter code start -->
+<font size=1><script type="text/javascript" language="javascript"><!--
+_d=document; _n=navigator; _t=new Date(); function t() { _d.write(
+"<img src=\"http://counter.search.bg/cgi-bin/c?_id=divotii3&_z=0&_r="+
+_r+"&_c="+_c+"&_j="+_j+"&_t="+(_t.getTimezoneOffset())+"&_k="+_k+
+"&_l="+escape(_d.referrer)+"\" width=70 height=15 "+
+"border=0>");} _c="0"; _r="0"; _j="U"; _k="U"; _d.cookie="_c=y";
+_d.cookie.length>0?_k="Y":_k="N";//--></script>
+<script type="text/javascript" language="javascript1.2"><!--
+_b=screen; _r=_b.width; _n.appName!="Netscape"?_c=_b.colorDepth : _c=_b.pixelDepth;
+_n.javaEnabled()?_j="Y":_j="N";//--></script>
+<a href="http://counter.search.bg/cgi-bin/s?_id=divotii3"
+target="_top"><script type="text/javascript" language="javascript"><!--
+t(); //--></script><noscript><img width=70 height=15 border=0 alt=""
+src="http://counter.search.bg/cgi-bin/c?_id=divotii3&amp;_z=0"></noscript></a></font>
+<!-- Web Counter code end -->
+
+ &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<!--Start FreeCounter code! -->
+<script language="javascript">
+
+var r=document.referrer
+var bv=navigator.appVersion
+if(navigator.appName=="Microsoft Internet Explorer"){pos=bv.lastIndexOf('.');bv=bv.substring(pos-1,bv.length)}
+bv=parseFloat(bv)
+var n=escape(navigator.appName+' '+bv)
+var p=escape(navigator.platform)
+var sw=screen.width+'x'+screen.height
+var sd=screen.colorDepth
+document.write('<a href=http://www.freecount.co.uk/counter/t-stats.php?i=776 target=new><img src=http://www.freecount.co.uk/counter/counter.php?i=776&r='+r+'&n='+n+'&p='+p+'&sw='+sw+'&sd='+sd+' border=0></a>')
+
+</script>
+<!--End FreeCounter code! -->
+
+</td>
+<td><div align="left"><small>написано на 03 Януари 2002</small></div></td>
+<td width="5%"></td>
+<td><small>корекция на 03 Януари 2002</small></td>
+</tr>
+</table>
+
+
+</FONT>
+</body>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/divotii/div3.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+</html>

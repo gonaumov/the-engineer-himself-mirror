@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/2xbase64.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>2 x Base64 Converter</title>
+<script type="text/javascript">
+<!--
+// This page is free for private use!
+
+// http://free.hit.bg/injinera
+// http://injinera.bgplus.com
+
+// разкодира писма от лош сървър, направил 2-пъти Base64,
+// вместо право и обратно Base64
+//
+//  ИЛИ от съчтанието Флекс Тайп 3.2 + EUDORA Mail
+//
+//Направено е по идея на "AБВ Converter"от http://things.hit.bg/
+//но кода е оптимизиран за бързина, личи под IE5+
+//и големината на фонта се нагажда по разделителната способност
+
+
+onerror=r;
+function r()
+{alert("Sorry! Java Script Error!\rTry using a modern browser...");
+}
+
+function Pt() // How Px be text height, according to screen resolution
+{ if(screen.height<=590) {var P=10;}
+  else {var P=11;}
+ if(screen.height>=767){var P=13;}
+ if(screen.height>=860){var P=14;}
+ if(screen.height>=1020){var P=16;}
+ if(screen.height>=1190){var P=18;}
+return P;
+}
+
+function e(){document.f.t.focus();}
+
+function z(){
+var b=document.f.t.value;
+var Output=document.f.t2;
+var z=''
+
+// temporaly mesage
+Output.value='конвертира ....';
+  function x(a){z=z + a;}
+
+for(i=0; i<b.length; i++){
+var d=b.charAt(i);
+
+if(d==' '){x(' ')}
+if(d=='`'){x('а')}
+if(d=='a'){x('б')}
+if(d=='b'){x('в')}
+if(d=='c'){x('г')}
+if(d=='d'){x('д')}
+if(d=='e'){x('е')}
+if(d=='f'){x('ж')}
+if(d=='g'){x('з')}
+if(d=='h'){x('и')}
+if(d=='i'){x('й')}
+if(d=='j'){x('к')}
+if(d=='k'){x('л')}
+if(d=='l'){x('м')}
+if(d=='m'){x('н')}
+if(d=='n'){x('о')}
+if(d=='o'){x('п')}
+if(d=='p'){x('р')}
+if(d=='q'){x('с')}
+if(d=='r'){x('т')}
+if(d=='s'){x('у')}
+if(d=='t'){x('ф')}
+if(d=='u'){x('х')}
+if(d=='v'){x('ц')}
+if(d=='w'){x('ч')}
+if(d=='x'){x('ш')}
+if(d=='y'){x('щ')}
+if(d=='z'){x('ъ')}
+if(d=='{'){x('ы')}
+if(d=='|'){x('ь')}
+if(d=='}'){x('э')}
+if(d=='~'){x('ю')}
+if(d==''){x('я')}
+
+//bg capitals
+
+if(d=='@'){x('А')}
+if(d=='A'){x('Б')}
+if(d=='B'){x('В')}
+if(d=='C'){x('Г')}
+if(d=='D'){x('Д')}
+if(d=='E'){x('Е')}
+if(d=='F'){x('Ж')}
+if(d=='G'){x('З')}
+if(d=='H'){x('И')}
+if(d=='I'){x('Й')}
+if(d=='J'){x('К')}
+if(d=='K'){x('Л')}
+if(d=='L'){x('М')}
+if(d=='M'){x('Н')}
+if(d=='N'){x('О')}
+if(d=='O'){x('П')}
+if(d=='P'){x('Р')}
+if(d=='Q'){x('С')}
+if(d=='R'){x('Т')}
+if(d=='S'){x('У')}
+if(d=='T'){x('Ф')}
+if(d=='U'){x('Х')}
+if(d=='V'){x('Ц')}
+if(d=='W'){x('Ч')}
+if(d=='X'){x('Ш')}
+if(d=='Y'){x('Щ')}
+if(d=='Z'){x('Ъ')}
+if(d=='['){x('Ы')}
+if(d=='\\'){x('Ь')}
+if(d==']'){x('Э')}
+if(d=='^'){x('Ю')}
+if(d=='_'){x('Я')}
+
+
+//numbers
+
+if(d=='1'){x('1')}
+if(d=='2'){x('2')}
+if(d=='3'){x('3')}
+if(d=='4'){x('4')}
+if(d=='5'){x('5')}
+if(d=='6'){x('6')}
+if(d=='7'){x('7')}
+if(d=='8'){x('8')}
+if(d=='9'){x('9')}
+if(d=='0'){x('0')}
+
+//symbols
+
+if(d=='!'){x('!')}
+if(d=='#'){x('#')}
+if(d=='$'){x('$')}
+if(d=='%'){x('%')}
+if(d=='&'){x('&')}
+if(d=='*'){x('*')}
+if(d=='('){x('(')}
+if(d==')'){x(')')}
+if(d=='+'){x('+')}
+if(d=='-'){x('-')}
+if(d=='='){x('=')}
+if(d=='<'){x('<')}
+if(d=='>'){x('>')}
+if(d==','){x(',')}
+if(d=='.'){x('.')}
+if(d=='?'){x('?')}
+if(d=='http://free.hit.bg/'){x('http://free.hit.bg/')}
+if(d==':'){x(':')}
+if(d==';'){x(';')}
+if(d=='\"'){x('\"')}
+if(d=='\''){x('\'')}
+if(d=='\n'){x('\n')}
+}
+Output.value=z;
+}
+//-->
+</script>
+
+<script type="text/javascript">
+<!-- hide
+function h()
+{
+var P2 = Pt(); if(P>=14){P++;}
+var P = P2++
+var stl1 ='<p style="font-size:' + P2 + 'px;font-weight:bold;font-family:Verdana,Sans-Serif;color:#006666;text-decoration:underline;">'
+var stl2 ='<pre style="font-size:' + P2 + 'px;font-family:Verdana,sans-serif;">'
+
+d=window.open('','hlp','height='+39*P + ',width=' + 41*P + ',left=20,top=30,resizable=yes');
+d.document.writeln('<html><head><title>2 x Base64 Converter - HELP</title></head><body bgcolor=#FAFAFA>');
+d.document.writeln('<center>' + stl1 + ' 2 x Base64 Converter - HELP</center></p>');
+d.document.writeln(stl2);
+d.document.writeln('Съчетанието <B>Флекс Тайп 3.2 + EUDORA Mail</B> обърква странно');
+d.document.writeln('писмата с Кирилица. Става нещо като <B>конверсия Base64</B>');
+d.document.writeln('два пъти, вместо права и обратна.');
+
+
+d.document.writeln('<B>'+ stl2+ 'Тогава вместо:</B> <BR>');
+d.document.writeln(stl2);
+d.document.writeln('...не знам как да го оправя - дали да сменя шрифта на оригинала');
+d.document.writeln('в някой стандартен, дето не го знам кой е, или да търся някъде...</pre>');
+d.document.writeln('<B>'+ stl2 + 'Излиза следното:</B> <BR>');
+d.document.writeln(stl2);
+d.document.writeln('...me gm`l j`j d` cn nop`b - d`kh d` qlem xphtr` m` nphchm`k`');
+d.document.writeln('b mjni qr`md`prem, dern me cn gm`l jni e, hkh d` rzpq mjzde...</pre>');
+d.document.writeln('<HR><P>');
+d.document.writeln(stl1 + 'Декодиране:</p>');
+d.document.writeln(stl2);
+d.document.writeln('Копва се кофтия текст от писмото и се пейства в горното прозорче.');
+d.document.writeln('Щрака се на Convert <B>и се чака - Джава скиптовете са бавни.</B><P>');
+d.document.writeln('<HR>');
+d.document.writeln(stl1 + 'Версия и особености:</p>');
+d.document.writeln(stl2);
+d.document.writeln('Версия 2, Август 2002. Шрифта е 10-16 Pt според екрана');
+d.document.writeln('Оптимизирано е за бързина, но при Opera няма разлика.');
+d.document.writeln('<center>***Генади Атанасов - Инжинера ***</center>');
+
+d.document.writeln('</pre></body></html>');
+d.document.close();
+}
+//-->
+</script>
+<script type="text/javascript">
+<!--
+
+document.writeln('<style type="text/css">');
+if(navigator.appName=="Netscape"&&navigator.userAgent.indexOf("Mozilla/4")!=-1)
+{var P=Pt();
+document.write('.b3{font-weight:bold;font-size:' +
+P + 'px;font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;}');
+document.writeln('');
+}
+else
+var P=Pt();
+{document.writeln('.b2{font-size:' +
+P + 'px;font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;color:#000000;background-color:#ffffff;border:1px ridge #000000;}');
+P++
+document.write('.b3{font-weight:bold;font-size:' +
+P + 'px;font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;color:#000000;background-color:#ffffff;border:1px ridge #000000;}');
+}
+document.writeln('</style>');
+//-->
+</script>
+<style type="text/css">
+<!--
+h4{
+font-weight:bold;
+font-size:14px;
+font-family:Verdana,Arial,Helvetica,Sans-Serif;
+color:#006666;
+background-color:white;
+}
+a:visited{
+color:#6699ff;
+}
+a:link{
+color:#6699ff;
+}
+a:hover{
+color:#006666;
+}
+a:active{
+color:#6699ff;
+}
+//-->
+</style>
+</head>
+<body bgcolor="#460808" onLoad="e();">
+<table align="center" height="100%"><tr><td>
+<table bgcolor="#CB901F" cellpadding="8" cellspacing="0" border="0"><tr><td>
+<table bgcolor="white" cellpadding="6" cellspacing="0" border="0">
+<tr><td>
+
+<form name="f">
+
+<table width="95%"><tr><td>
+<input type="button" value="Convert" class="b3" onClick="z();">
+ <input type="button" value="Clear" class="b3" onClick="document.f.t2.value='';">
+ <input type="reset" value="Reset" class="b3" onClick="e();">
+ <input type="button" class="b3" value="Help" onClick="h();">
+</td><td align=RIGHT><h4>2 x Base64 Converter
+</td><r>
+</table>
+
+<script type="text/javascript">
+<!--
+var P=Pt(); P++;
+document.writeln('<textarea cols="100" rows="'+P+'" wrap="hard" name="t" class="b2"></textarea><br>');
+document.writeln('<textarea cols="100" rows="'+P+'" wrap="hard" name="t2" class="b2"></textarea><br>');
+-->
+</script>
+
+</form>
+<div style="font-weight:bold;font-size:12px;font-family:Verdana,Arial,Helvetica,Sans-Serif;" align="center">
+<a href="Private/foto1.htm">free.hit.bg/injinera</a>
+&nbsp; &nbsp; &nbsp; 
+<a href="http://injinera.bgplus.com/">injinera.bgplus.com</a></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</body>
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/2xbase64.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+</html>

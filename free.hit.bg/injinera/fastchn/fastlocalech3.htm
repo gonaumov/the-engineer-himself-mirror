@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Saved from http://free.hit.bg/injinera -->
+<HTML>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/fastchn/fastlocalech3.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+<HEAD>
+ <TITLE>"Бърза смяна на страната по метода на Инжинера" за Windows 9xx и Me - конкретни начини 3/3 --</TITLE>
+ <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <META content="fast way to change locale on windows 95,windows 98 and Me" name=description>
+ <META content="Genadi Atanasov,injinera,Cyrillic,Windows,change locale,locales,
+	безплатно,гювеч,аванта,смяна на страната,Генади Атанасов"
+	name=keywords>
+	<META content=""Бърза смяна на страната по метода на Инжинера" за Windows 9xx и Me - конкретни начини" name=Title>
+	<META content="Генади Атанасов" name=Author>
+	<META content="1st Page 2000,TextРad" name=GENERATOR>
+	<META content=Български name=Language>
+</HEAD>
+
+<FONT FACE=Arial,Tahoma>
+<BODY BGCOLOR=#DDDDFF TEXT="#000000" LINK="#0000FF" VLINK="#0000FF" ALINK="#FF0000">
+<A NAME="top"></A>
+
+
+<!-- HEAD  Table   BEGIN -->
+<TABLE ALIGN=CENTER WIDTH=100% BORDER=0 cellPadding=0 cellSpacing=0>
+<TR><TD BGCOLOR=#CB901F ALIGN=CENTER><FONT SIZE=-1 COLOR="#000005">
+Сайта е на инженер Генади Атанасов</FONT></TD></TR>
+</TABLE><!-- HEAD  Table   end -->
+
+
+<TABLE ALIGN=CENTER WIDTH=95% BORDER=0 cellPadding=15 cellSpacing=0 bgcolor=#EEEEEE>
+<TR HEIGHT=15><TD></TD></TR>
+ <TR><TD ALIGN=CENTER><font color="#ff0000" size=+1><B>
+ "Бърза смяна на страната по метода на Инжинера" за Windows 9xx и Me - конкретни начини
+</B></font>
+</TD></TR>
+<TR HEIGHT=15><TD></TD></TR>
+</TD></TR>
+<TR HEIGHT=15><TD ALIGN=right>
+<form><input type="button" value="?!? ида от търсачката, не се ориентирам. Светни ме!"
+onClick="window.location.href='#navigation'"></form>
+</TD></TR>
+
+<TR><TD>
+<FONT COLOR="BLUE" SIZE="+1"><center>
+"Бърза смяна на страната по метода на Инжинера" за Windows 9xx и Me ръчно или с BAT-файлове</center>
+</B></FONT><hr><BR>
+<small><a href="fastlocalech2.htm">Теоретичното обяснение</a> за "Бърза смяна на страната по
+метода на Инжинера" е изчерпателно и по него може да се превключи ръчно Windows -а
+към коя да е страна от тези, за които е предназначен.
+Ето и някои указания, опростяващи работата в отделни случаи.<br>
+Най-просто рецептата се прилага, ако не желаем да променяме страната, искаме просто
+<b>да поправим грешката, че Windows - а е инсталиран при избор на USA.</b> Тогава,
+<b>за България</b> просто пишем следният ред в DOS промпт:</small>
+<P><FONT FACE="Courier New"><B><small>
+RunDll.exe setupx.dll,InstallHinfSection L0402 2 %windir%\INF\LOCALE.INF
+</small></B></FONT>
+<P>
+<small>Рестартираме и за проверка поставяме курсора на мишката на часовника - появява се тултип
+с датата, изписана на Български. За друга страна вместо L0402 се пише
+<a href="fastlocalech2.htm#kod">друго</a>.</small>
+<P>
+<small><b>Процеса може да се автоматизира чрез комбинация от BAT и INF- файлове.</b><br>
+По-надолу има файлове за някои страни. Те правят всичко без
+<a href="fastlocalech2.htm#step1">стъпка едно</a>. Проблемът на тези файлове
+са съобщенията, които те изписват. Понеже не се знае на коя страна сме настроени в
+момента, те трябва да са на езика на съответната страна, но с латински букви.
+Досега <b>файлове с верни диалози има за България и за Македония.</b> Не съм сигурен, че
+руснак може да разбере това, което аз съм писал на нещо като руски с латиница.
+Иначе работят безотказно.</small>
+ </TD></TR>
+  <TR HEIGHT=15 BGCOLOR=#BBFFBB><TD></TD></TR>
+
+<TR BGCOLOR=#BBFFBB><TD>
+<small><b>"Опасна Багра"</b> - един от Македонските сайтове, които сложиха моята
+разработка за употреба, след като Георги Станојевски оправи съобщенията, описва
+така начина им на работа:</small>
+<P>
+<table width=70%><tr><td width=8%></td>
+<td>
+<small>
+<FONT COLOR="BLUE"><b>"Значи, за инсталирање на македонското локале и тастатура се стартува Makedonija.bat и
+следи ги инструкциите на екранот. ( треба само неколку пати да стиснеш ENTER ...
+ресетираш и се ти е убаво во животот)."</b></FONT></small>
+<P><small>
+</td></tr>
+</table>
+
+<small>
+Ще правя още BAT файлове, само ако се появи интерес от някоя страна и получа помощ
+за съставяне на разбираеми съобщения.</small>
+ </TD></TR>
+  <TR HEIGHT=15><TD></TD></TR>
+
+<TR><TD>
+<small>
+BAT-файловете версия 14 март са разделени на 2 подварианта. Тези за Windows 95 правят една от
+проверките по <b>Стъпка едно</b>, тоест проверката за наличие на файл EGA2.CPI в инсталационните файлове.
+Основният вариант е за Windows 98 и Windows Me и не прави тази проверка.<br>
+<b>Сами трябва да проверите дали  Windows-а не е
+<A HREF="fastlocalech.htm#lokaliziran"> локализирана версия</A> и ако да - не пускайте BAT-файловете!</b>
+</small>
+<P><hr>
+<B>BAT-файловете работят съвместно с INF файл(ове), които трябва да са в същата директория.Те изкарват
+надписи, които задължително се четат и спазват!</B>
+<P>
+<BR>
+<center><table border=1 cellpadding="8" BGCOLOR=#BBFFBB>
+<tr><td colspan=4 ALIGN=CENTER>
+<B>Налични BAT файлове за следните страни към 2002.03.14</B></td></tr>
+
+<tr>
+<td><b>Страна/LOCALE</b></td><td><b>ДОС клавиатура<BR>DOS Keyboard</b></td><td colspan=2><b>Файл/File Name</b></td>
+</tr><tr>
+<td>България</td><td ALIGN=CENTER>-</td><td>Bulgaria.bat <br>Bulgaria95.bat</td>
+<td rowspan=2><img src="../kartinki1/globus1.gif" width="105" height="94" alt="глобус на България" border="0"></td>
+</tr><tr>
+
+<td>България</td><td ALIGN=CENTER>+</td><td>BulgariaWithDOS_KBD.bat<br>BulgariaWithDOS_KBD95.bat</td>
+</tr><tr>
+<td>French(Standard)</td><td ALIGN=CENTER>-</td><td colspan=2>French(Standard).BAT<br>French(Standard)95.BAT</td>
+</tr><tr>
+<td>French(Standard)</td><td ALIGN=CENTER>+</td><td colspan=2>French(Standard)WithDOS_KBD.BAT<br>French(Standard)WithDOS_KBD95.BAT</td>
+</tr><tr>
+<td>Македония</td><td ALIGN=CENTER>-</td><td colspan=2>MAKEDONIJA.bat<br>MAKEDONIJA95.bat</td>
+</tr><tr>
+<td>Русия</td><td ALIGN=CENTER>-</td><td colspan=2>Russia.bat<br>Russia95.bat</td>
+</tr><tr>
+<td>Русия</td><td ALIGN=CENTER>+</td><td colspan=2>RussiaWithDOS_KBD.bat<br>RussiaWithDOS_KBD95.bat</td>
+</tr><tr>
+<td>English(USA)</td><td ALIGN=CENTER>еднакво/same</td><td colspan=2>USA.bat<br>
+usa-prevedeno.bat - на Македонски
+</tr><tr>
+<td colspan=4>
+	<center><a href="../downloads/fasLocCh2.rar"> BAT - файловете вариант 26 Май 2002 (5KB)
+	</center></a>
+</td></tr>
+</table></center>
+</TD></TR>
+<TR HEIGHT=95><TD></A></TD></TR>
+<TR><TD>
+<FONT COLOR="BLUE" SIZE="+1"><center>
+"Бърза смяна на страната по метода на Инжинера" за Windows 9xx и Me през контрол панела</center>
+</B></FONT><hr><BR>
+<small>
+
+Съществува още един начин за "Бърза смяна на страната по метода на Инжинера": с малка
+преработка <b>довеждаме LOCALE.INF и Multilng.inf до вид при който страната и
+клавиатурата може да се избират през Контрол Панела.</b> За по-сигурно ще работим
+с техни копия. Ето как:</small>
+<ul>
+<li><small>Точи се от моят сайт комплекта от от BAT и INF- файлове, версията от 26 Май 2002 г.</small>
+<P>
+<small>
+<a href="../downloads/fasLocCh2.rar">free.hit.bg/injinera/downloads/fasLocCh2.rar</a>
+</small>
+<P>
+<small>От него ни трябва <b>само файла AutoexDL.INF.</b> Този файл изпълнява стъпка три и
+отменя необходимостта ръчно да трием редове от от Config.sys и Autoexec.bat. Написан
+е така, че може да работи с дясно цъкане и Install, а също се вижда и през Контрол Панела.</small>
+</li>
+<li>
+<small>Във Windows (не е от значение, но там си е добре) директорията създаваме нов фолдер
+с име <b>Atanasov.</b> В него създаваме още два фолдера: Keyboard и Locales. Копираме
+<b>AutoexDL.INF</b> в  <b>...Atanasov\Locales.</b>
+Там копираме и файла <b>Locale.inf</b>, взимаме го от <b>C:\Windows\Inf.</b></small>
+<P></li>
+
+<li><P>
+<b>Променяме един ред в Locale.inf (САМО!).</b>
+<P>
+<b>[LocaleList] става [Optional Components].</b>
+<P>
+<small>Сменяме му и името,  за да не го объркаме случайно с оригиналния, например
+<b>LocaleG.inf</b> - нещо до 8 букви.</small>
+</li>
+
+<li>
+<small>В <b>...Atanasov\Keyboard</b> копираме &nbsp;<b>Multilng.inf</b></small>
+<P>
+<b>Променяме [KeyboardList] на [Optional Components]</b>
+<P>
+<small> Преименуваме, подходящо е MultiKBD.inf.</small>
+<P>
+</li>
+
+<li>Нека шоуто да почне!
+</li>
+</ul>
+</TD></TR>
+<TR HEIGHT=25><TD></A></TD></TR>
+<TR><TD>
+Отваряме <b>Control panel, Add/Remove Programs, Windows Setup, Have Disk.</b>
+Отваря се ново прозорче със заглавие <b>"Install From Disk"</b>, цъкаме на <b>Browse . . .</b>
+Браузваме до <b>C:\Windows\ Atanasov\Locales</b>, цъкаме на OK и OK.<br>
+<img src="Kartinka1.1.png" width="414" height="487" alt="Kartinka1" border="0" Vspace=10>
+<br><P>
+Тогава се показва прозорец за избор на страна. Най-горният ред е от <b>AutoexDL.INF</b> и
+трябва винаги да е зачекнат. Редовете надолу са от преправения L<b>ocale.inf</b>.
+От тях се зачеква само една страна! Нека за разнообразие изберем  Norwegian (bokmal)
+<br>
+<img src="Kartinka2.1.png" width="341" height="354" alt="Kartinka2" border="0" Vspace=5>
+<img src="Kartinka3.1.png" width="341" height="354" alt="Kartinka3" border="0" Vspace=5 Hspace=5>
+<br><P>
+Цъкаме на Install, появява се Copy Files прозорче, на което трябва да покажем директорията
+с инсталационните файлове на Windows - а, ако то не ги намери само. Процеса завършва с
+предложение за рестарт. За документиране в този момент направих скрийншот на екрана с
+часовника и тултип с датата на български. След рестарта пуснах IrfanView и направих пак
+скрийншот с часа и дата на Норвежки. Процеса е под 3 минути включително правенето на
+скрийншот с отрязване и запис на картинката.<br>
+<img src="Kartinka4.1.png" width="124" height="42" alt="Kartinka4" border="0"Vspace=5>
+<img src="Kartinka5.1.png" width="122" height="40" alt="Kartinka5" border="0"Vspace=5 Hspace=15>
+<br><P><hr><br><br><P>
+
+Добавянето на клавиатури от тези, които са в инсталационното CD е на същия принцип.
+<P>
+Браузва се до <b>C:\Windows\Atanasov\Keyboard.</b> Зачеква се само един ред! Трябва
+да направим рестарт, дори и да няма покана. Един рестарт е достатъчен за страната и за клаватурата.
+<br><P>
+<FONT SIZE=+1 Color=DARKRED>
+<b>Смяната през Контрол Панела не отменя <a href="fastlocalech2.htm#step1">Стъпка едно</a>
+от Теоретичното обяснение!</b>
+</FONT>
+</TD></TR>
+
+<TR HEIGHT=55><TD></TD></TR>
+<TR><TD>
+<HR><P>
+<small>
+След всичко написано по-горе едва ли някой ще се учуди, че предлагам и фонетични клавиатурни
+подредби за за Windows <a href="../dloadmnu.htm">всички версии</a> от 9хх до XP, които имат инсталатор,
+работят без рестарт, сменяват се през Контрол Панела и се деинсталира пак от там през Add/Remove
+Programs. Тези за <a href="../usa/USA_bula.htm">2000</a> и <a href="../wxp/xp_bul.htm">XP</a>
+се инсталират без спиране на System Files Protection.
+Най- минималната, 100% работоспособна версия, за 9хх и Me, т. нар. вариант "като пушка"
+е само 1 643 байта. Той съдържа работещи файлове без обяснения и се точи от тук:
+<a href="../9xfonet/bgfonetGUN.htm">---></a>
+</small><A NAME="navigation"></A>
+</TD></TR>
+
+<TR HEIGHT=25><TD></TD></TR>
+<TR bgColor=#ffcc33><TD>
+<center><big><b>Помагало за шматкане</b> (site navigation) <b>из сайта на Инжинера</b></big> &nbsp;&nbsp;
+</center>
+<P>
+
+<table>
+<tr>
+       <td rowspan=2 valign=middle><b><small><a href="../na4alo.htm">Начало</a>-></small></td>
+       <td valign=bottom>/</td>
+
+       <td><center><small><a href="../dloadmnu.htm">Канелка за кирилизация на Windows-и</a></small></center></td>
+       <td> &nbsp;\</td>
+       <td rowspan=2 valign=middle><center><small>
+	   <a href="fastlocalech.htm">-->Поддръжка на език на системно ниво (част 1/3)-></a>
+	   </small></center></td>
+</tr>
+<tr>
+       <td valign=top>\</td>
+       <td><center><small><a href="../map.htm">Карта на сайта</a></small></center></td>
+       <td> &nbsp;/</td>
+</tr>
+
+<tr><td colspan=5>
+	<P><P><small>
+	<a href="fastlocalech2.htm">
+	->"Бърза смяна на страната по метода на Инжинера" за Win 9xx и Me-теоретично обяснение (част 2/3)
+	</a>-></small></td>
+</tr>
+<tr><td colspan=5>
+<P><P><small>
+->"Бърза смяна на страната по метода на Инжинера" за Win 9xx и Me-конкретни начини (Тук, 3/3)
+<P></small></td>
+</tr>
+</table>
+
+</TR></TD>
+
+<TR HEIGHT=65><TD>
+<small>Ти откъде ги знаеш тези работи? Мигар всичко сам измисли?&nbsp;&nbsp;&nbsp;
+(линкове за четене, прави се<a href="http://free.hit.bg/injinera/fastchn/cyrLinks.html"> --></a>)
+</small>
+</TD></TR>
+<TR HEIGHT=35 bgColor=#BBFFBB><TD><hr></TD></TR>
+
+<TR HEIGHT=10 BGCOLOR=#BBFFBB><TD></TD></TR>
+<TR BGCOLOR=#BBFFBB><TD>
+<FONT COLOR="BLUE">
+<center><B>Заключение и далече отиващи изводи</B></center></FONT><BR>
+<P><small>
+
+Практическият извод от написаното на три големи страници (виж по-горе жълтата
+шматкалка) е, че Windows 9xx и Me лесно може да си смени
+страната на системните настройки (Default Locale) без преинсталация. С промяна само
+по на един ред в два INF файла това може да става през Контрол Панела. Нямало е
+проблем тези файлове да се напишат по малко по-различен начин и/или да се постави
+подходящ   .cpl  файл, който да показва нагледно и в достъпен вид в Контрол панела
+страните и да предлага избор за тяхното променяне. <b>Могло е, но очевидно
+не са искали.</small>
+</b><br><hr>
+<P>
+
+<small>Да добавим и други  ОБЩОЗВЕСТНИ ФАКТИ  и да  видим какви изводи следват.<br>
+<b>Фактите:</b></small>
+<P>
+<u>Практически бяха оборени твърденията на Майкрософтци, че:</u>
+<ol>
+<li>
+<small>Internet Explorer е неразделна част от Windows 98 и следващи. Бил Гейтс си го
+призна пред съда, като го насвиха</small>
+</li>
+<li>
+<small>Windows Me няма DOS, може да му се пусне само от дискета. Доста бързо
+беше направен пач.</small>
+</li>
+<li>
+<small>за NT - 2000 -XP смяната на страната на системно ниво може да става през контрол
+панела, а за 9xx и Me само чрез преинсталация, оборено в този сайт.</small>
+</li>
+</ol>
+<small>Въпреки това, Майкрософтци продължават да са уверени, че потребителите на Windows
+ядат доматите с колците. Те дори си позволиха да наричат сънародника ни Георги
+Гунински "Онзи безотговорен човек". Всъщност Георги Гунински е известният ловец
+на бъгове, който помага да се отстраняват един по един недостатъците в продуктите
+на <b>"Онази безотговорна компания" която не си изпипва докрай работите, но за сметка
+на това не пропуска да послъже</b>. Помнещите от по-отдавна веднага се сещаме за
+"Черногледците, безотговорно хулещи нашата социалистическа държава и нейното
+ръководство в лицето на Партията и правителството"</small>
+<P>
+В България фирмата Датекс продава продукти за Кирилизация, тоест за променяне Windows
+на системно ниво (чети - за разваляне). Тези продукти не са получили логото Designed for Windows и едва ли
+ще го получат поради липсата на работеща деинсталираща процедура. Напротив, за
+заблуда нахално е поставена нейна имитация. <b>Майкрософт-България не се притеснява
+(поне не му личи)</b> да участвува заедно с тази фирма в BSA - организацията, дето
+пусна рекламата с белезниците. Да е някъде по света, някой да разваля на Били Уиндоуса -
+ще му пуснат адвокати и ще го попилеят. <b><big>Теодор Милев обаче се таи като ###### в #### и не
+реагира въпреки шума, който вдигам по въпроса.</big></b> Не ме разбирайте погрешно, не казвам,
+че взима комисионни от Датекса. Само го мисля.
+<br><hr>
+<small><b>Край на фактите, коментар:</b></small>
+<br>
+<small>Очевидните изводи от горните ФАКТИ няма да ги напиша, вие сами съберете 2 + 2.
+Ако някой се съмнява, че изводите са точно такива, да отвори
+<a href="../deinst/mitishatiev.htm">free.hit.bg/injinera/deinst/mitishatiev.htm</a>
+Най далече отиващият и не толкова очевиден извод е следният:  Малко сме в България
+тези, които смеем да произнесем набиващ се в очите факт на глас. Неизвестно защо
+първо се интересуваме за кой човек или за коя организация се отнася факта. Фактите
+са си факти и те трябва да се казват на глас, независимо кой е човека: Тодор Живков,
+Жан Виденов, Иван Костов, Георги Първанов или Симеон СаксКобурготски и коя е
+организацията: Датекс, БКП, NATO или Майкрософт България. Затова сме в това положение
+в което сме: от Windows-а и възможността да си пишем на Кирилица до оправията
+в цялата ни държава.</small>
+</TD></TR>
+<TR HEIGHT=20 BGCOLOR=#BBFFBB><TD></TD></TR>
+
+<TR HEIGHT=25><TD><hr></TD></TR>
+
+<TR><TD><small>
+<P>
+
+<table width="90%"><tr>
+<td width="50%"><div align="left">
+
+<!--Start FreeCounter code! -->
+<script language="javascript">
+
+var r=document.referrer
+var bv=navigator.appVersion
+if(navigator.appName=="Microsoft Internet Explorer"){pos=bv.lastIndexOf('.');bv=bv.substring(pos-1,bv.length)}
+bv=parseFloat(bv)
+var n=escape(navigator.appName+' '+bv)
+var p=escape(navigator.platform)
+var sw=screen.width+'x'+screen.height
+var sd=screen.colorDepth
+document.write('<a href=http://www.freecount.co.uk/counter/t-stats.php?i=898 target=new><img src=http://www.freecount.co.uk/counter/counter.php?i=898&r='+r+'&n='+n+'&p='+p+'&sw='+sw+'&sd='+sd+' border=0></a>')
+
+</script>
+<!--End FreeCounter code! -->
+&nbsp;&nbsp;&nbsp;
+
+<!-- Web Counter code start -->
+<font size=1><script type="text/javascript" language="javascript"><!--
+_d=document; _n=navigator; _t=new Date(); function t() { _d.write(
+"<img src=\"http://counter.search.bg/cgi-bin/c?_id=injinera&_z=0&_r="+
+_r+"&_c="+_c+"&_j="+_j+"&_t="+(_t.getTimezoneOffset())+"&_k="+_k+
+"&_l="+escape(_d.referrer)+"\" width=70 height=15 "+
+"border=0>");} _c="0"; _r="0"; _j="U"; _k="U"; _d.cookie="_c=y";
+_d.cookie.length>0?_k="Y":_k="N";//--></script>
+<script type="text/javascript" language="javascript1.2"><!--
+_b=screen; _r=_b.width; _n.appName!="Netscape"?_c=_b.colorDepth : _c=_b.pixelDepth;
+_n.javaEnabled()?_j="Y":_j="N";//--></script>
+<a href="http://counter.search.bg/cgi-bin/s?_id=injinera"
+target="_top"><script type="text/javascript" language="javascript"><!--
+t(); //--></script><noscript><img width=70 height=15 border=0 alt=""
+src="../../../counter.search.bg/cgi-bin/cda6b.gif%3F_id=injinera&amp;_z=0"></noscript></a></font>
+<!-- Web Counter code end -->
+
+<small>написано на 24 Ноември 2001</small></div></td>
+<td width="2%"></td>
+<td width="30%"><small>корекция на 26 Май 2002</small></td>
+<td><form><input type="button" value="^ горе ^" onClick="window.location.href='#top'"></form>
+</td>
+</tr>
+</table>
+
+</TD></TR>
+<TR HEIGHT=25><TD></TD></TR>
+</TABLE>
+
+</FONT>
+</BODY>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/fastchn/fastlocalech3.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+</HTML>

@@ -1,0 +1,128 @@
+<HTML>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/beznakisvane/otraz/onetouch.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+<HEAD>
+  <TITLE>Кирилизация на Windows 98 и МЕ  от раз </TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <META content="Free Bulgarian Cyrillic tips" name="description">
+ </HEAD>
+
+<FONT FACE=Arial,Tahoma>
+<!-- Saved from free.hit.bg/injinera or  free.top.bg/injinera-->
+
+<BODY BGCOLOR=#F3FCFC TEXT="#000000" LINK="#0000FF" VLINK="#0000FF" ALINK="#FF0000">
+
+
+<!-- HEAD  Table   BEGIN -->
+<TABLE ALIGN=CENTER WIDTH=90% BORDER=0 cellPadding=0 cellSpacing=0 BGCOLOR=#CB901F>
+<TR>
+ <TD  ALIGN=CENTER><FONT SIZE=-1 COLOR="#000005">
+	Сайта е на инженер Генади  Атанасов </FONT>
+ </TD>
+</TR> </TABLE>  <!-- HEAD    Table END -->
+
+
+<TABLE ALIGN=CENTER WIDTH=90% BORDER=0><TBODY>
+ <TR HEIGHT=15><TD></TD></TR>
+ <TR><TD>
+
+<FONT SIZE=-3><br></FONT>
+<TABLE ALIGN=CENTER WIDTH=90% BORDER=0>
+
+<TD><center><FONT COLOR="BLUE"><STRONG>
+  Кирилизация на Windows от раз - от Инжинера
+ </FONT></STRONG><BR></center>
+ <HR>
+</TABLE>
+
+
+<FONT color=#000099 size=-1>
+Ако след сетъп на Windows 9ХХ и МЕ нямате Кирилица, това е защото при сетъпа не
+сте избрали Bulgarian или пък сте си купиили такъв Windows, който се сетъпва без
+да пита за нищо направо на настройки USA. Евентуално може да сте набавили (не съм
+видял купен Windows без Кирилица!!!) някоя от версиите на Windows 95, които
+просто нямат Кирилица, тогава - тц!
+<BR>
+<big><b>Ако не сте правили опит за качване на кирилизатор,</b></big> може да изкарате собствената
+безупречна Кирилица на Windows-а от раз (on the fly). Напишете в ДОС прозорец под Windows следният ред:
+(копнете го и го пейстнете, че е по-лесно)
+<P><big><b>
+RunDll.exe setupx.dll,InstallHinfSection L0402 2 %windir%\INF\LOCALE.INF</big>
+</b><P>
+
+Резултат: появява се Copy Files прозорче, поканвате се да рестартирате и след рестарта
+ Windows-а е кирилизиран. Това прозорче обаче търси оригиналните инсталационни
+ фаилове на Windows-а и ако не ги намери само, трябва Вие да му ги покажете -от
+ CD, диска или по мрежата. <b>По отношение на Кирилицата това е еквивалентно на
+ пресетъпване с избор на Locale "Bulgarian" и Keyboard Layout USA. </b>&nbsp;
+ <a href="http://free.hit.bg/injinera/beznakisvane/otraz/onetouch2.htm">Цъкни тук ако искаш подробно описание</a>
+ <BR>След рестарта остава да си качите езиков индикатор на Български от
+ Control Panel\Keyboard и ако искате- Фонетична БГ клавиатура от Инжинера.
+ <BR>
+ Недостатък: в Autoexec.bat само добавя редове "mode con codepage.." и ако се приложи
+ няколко пъти, те се натрупват.
+ <HR>
+ <b>Преди да го направите, прочетете</b> <br>
+  <A HREF="http://free.hit.bg/injinera/disclamer.htm">Не отговарям за поразии! </A>
+ и <a href="../haveCYR.htm">Кой Windows има Кирилица вътре?</a><BR>
+ След като го направите, не казвайте какво мислите за тези, които са Ви продавали
+ кирилизатори за 20 лева до 30 долара. Човещината и уважението са най-важни. Те
+ ако не са хора, Вие бъдете.
+ <hr>
+ <B>За Windows 2000 това си го има.</B>
+ &nbsp;&nbsp;<a href="../../usa/USA_bula.htm">Линк към подробното описание --></a>&nbsp;&nbsp;
+ Там в Control Panel отворяме Regional Options и слагаме (ако няма)
+ чавка на Cyrillic. В този момент може да ни се поиска инсталационният диск.
+ В полето "Your locale (location)" избираме Bulgarian и цъкаме върху него. Прозореца се
+ затваря сам и в него остава надписа Bulgarian. Цъкаме на бутона <B>"Set default"</B> (бутона
+ долу вляво). Показва се друго поле със списък на страни. В него избираме <B>Serbian
+ (Cyrillic)</B> и цъкаме върху OK. Всъщност, всички "Set default" Кирилици са еднакви под 2000,
+ те са CodePage 866, само Serbian (Cyrillic) е CodePage 855, тази, с която работят на
+ български 9x и Me Windows - ите без кирилизатори.
+  <A NAME="dagiebesh">
+ <B>ВНИМАНИЕ!</A> ако ви се струва, че трябва да се вършат някакви процедури върху някого,
+ насочвайте се съм Майкрософт България или директно към Бил Гейтс! Аз като неспециалист
+ просто установих как да се почисти изцапаното от тях!</B>
+<BR>
+<HR>
+<table><tr>
+<td><div align="left"><small>написано на 19 Юли 2001</small></div></td>
+<td width="5%"></td>
+<td><small>корекция на 23 Октомври 2001</small>
+&nbsp;&nbsp;&nbsp;
+
+<!-- Web Counter code start -->
+<font size=1><script type="text/javascript" language="javascript"><!--
+_d=document; _n=navigator; _t=new Date(); function t() { _d.write(
+"<img src=\"http://counter.search.bg/cgi-bin/c?_id=injinera&_z=0&_r="+
+_r+"&_c="+_c+"&_j="+_j+"&_t="+(_t.getTimezoneOffset())+"&_k="+_k+
+"&_l="+escape(_d.referrer)+"\" width=70 height=15 "+
+"border=0>");} _c="0"; _r="0"; _j="U"; _k="U"; _d.cookie="_c=y";
+_d.cookie.length>0?_k="Y":_k="N";//--></script>
+<script type="text/javascript" language="javascript1.2"><!--
+_b=screen; _r=_b.width; _n.appName!="Netscape"?_c=_b.colorDepth : _c=_b.pixelDepth;
+_n.javaEnabled()?_j="Y":_j="N";//--></script>
+<a href="http://counter.search.bg/cgi-bin/s?_id=injinera"
+target="_top"><script type="text/javascript" language="javascript"><!--
+t(); //--></script><noscript><img width=70 height=15 border=0 alt=""
+src="../../../../counter.search.bg/cgi-bin/cda6b.gif%3F_id=injinera&amp;_z=0"></noscript></a></font>
+<!-- Web Counter code end -->
+
+
+
+
+</td>
+</tr>
+</table>
+
+</TR></TD>
+</TBODY>
+</TABLE>
+
+</FONT>
+</BODY>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/beznakisvane/otraz/onetouch.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+</HTML>

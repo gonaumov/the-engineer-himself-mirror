@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Saved from free.hit.bg/injinera -->
+<html>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/divotii/div2.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+<head>
+ <title>Системна дискета с драйвери за CD-ROM според PC WORLD</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <META content="Системна дискета с драйвери за CD-ROM според PC WORLD" name=Title>
+ <META content="Генади Атанасов" name=Author>
+ <META content="1st Page 2000,TextРad" name=GENERATOR>
+ <META content=Български name=Language>
+</HEAD>
+<FONT FACE="Arial,Tahoma">
+
+<BODY BGCOLOR=#BBFFBB TEXT="#000000" LINK="#0000FF" VLINK="#0000FF" ALINK="#FF0000">
+
+<!-- HEAD  Table   BEGIN -->
+<TABLE ALIGN=CENTER WIDTH=100% BORDER=0 cellPadding=0 cellSpacing=0 BGCOLOR=#CB901F>
+<TR>
+ <TD  ALIGN=CENTER><FONT SIZE=-1 COLOR="#000005">
+	Сайта е на инженер Генади  Атанасов </FONT>
+ </TD>
+</TR> </TABLE>  <!-- HEAD    Table END -->
+
+<TABLE ALIGN=CENTER WIDTH=90%>
+<TR HEIGHT=15><TD></TD></TR>
+<TR>
+ <TD><FONT SIZE=+2>
+ <center><B>Системна дискета с драйвери за CD-ROM според PC WORLD бр. 10/2001</B></center></FONT>
+ <hr width="80%"></TD>
+</TR>
+<TR HEIGHT=15><TD></TD></TR>
+<TR><TD>
+Става въпрос за статията "Bootable CD-ROM" в раздел "ПРАКТИКА". Ако не беше в този раздел,
+спокойно щях да я мина към <b>"пишещият въобще не е в час"</b> и да не и обръщам внимание.
+Досега този раздел на PC WORLD беше трепач, но явно смяната на главният редактор е снижила
+нивото, да се надяваме - само временно.
+</TD></TR>
+
+<TR HEIGHT=15><TD></TD></TR>
+
+<TR><TD>
+	<table align=Center><tr><td>
+<BIG><center><B>
+Как така "пишещият въобще не е в час"? Я па ти!!!
+</B></center></BIG>
+</td></tr>
+</table>
+</TD></TR>
+
+<TR HEIGHT=15><TD></TD></TR>
+
+<TR><TD>
+Като чета написаното се сещам за анекдотичният случай с мой познат, който първата седмица
+след свързване към Интернет не е могъл да отвори нито един сайт. Причината: в указанията,
+дето е чел, не пише, че като се набере адрес, се натиска Enter. Та и сладурите от PC WORLD
+не са написали ясно и силно с дебели букви, че дискетата първо се форматира като системна
+чрез зачекване на "Copy system files" или чрез DOS командата:
+<P><B>
+FORMAT a: /U /S
+</B><P>
+Нека предположим, че някой интелигентен, но неопитен потребител е преминал това препятствие.
+(Опитният потребител като мен направо ще заяви: От зелена тиква акъл не ща!). Нека всичко да
+му е заработило, CD-то да му стартира. Тогава се проявява принципиалната недъгавост на
+този бутващ имидж.  <b>CD-то не може да се вади и да се сменя с друго!!!</b>
+<P>
+За да покажат, че наистина въобще не са в час, сладурите от PC WORLD ви учат да сложите
+драйвери за Руска Кирилица и досовски драйвер за клавиатура с руска подредба. Защо? Каква
+нужда имаме да четем под DOS файл, написан по Code Pade866? Под DOS се налага да се четат
+само файлове със следните имена: AllSerNo.txt, Serial.txt, CDKEY.txt, Ser#.txt или подобни,
+за които не трябва Кирилица.
+<P><HR><BR>
+</TD></TR>
+<TR HEIGHT=15><TD></TD></TR>
+<TR>
+ <TD><FONT SIZE=+2>
+ <center><B>Добре бе, Инжинере, ти к'во предлагаш?</B></center></FONT></TD>
+</TR>
+<TR HEIGHT=15><TD></TD></TR>
+<TR><TD>
+<ul>
+	<li><b>Предлагам на всички пишещи колеги да не цапат нета или хартията с непроверени работи.</b>
+	</li>
+	<li>Направата на стартова дискета - трепач не е лесна, иска време докато се разбере какво
+	наистина е нужно да има на нея и знания да може да го направиш.
+	</li>
+	<li>Ако нямате предвид нещо по- добро, направете си системна дискета от Windows 98.<BP>
+	Прави се през Control Panel, Add/Remove Programs,Startup Disk.
+	</li>
+	<li><B>Може евентуално</B> да си я доработите. Без доработка имаме Largest executable program
+	size 533K, което не винаги е достатъчно. Освен това на дискетата има много излишни файлове: -за
+	дискова компресия, за Кирилица и за други видове CD освен IDE. Аз и всичките ми познати имаме IDE
+	CD-ROM, не четем нищо на Кирилица под DOS и не ползваме дискова компресия, предполагам и при
+	вас е така.
+	</li>
+</ul>
+</TD></TR><TR><TD>
+Доработката: 1. Изхвърляне на излишните фаилове, дефрагментиране и качване на EMM386.exe:
+<BR>Отвараме DOS промпт и пишем (копираме и пействаме ред по ред и натискаме Enter)<BP>
+<PRE>
+a:
+DELTREE /Y as*.* bt*.* cou*.* d*.* *.cpi fl*.* mo*.*
+defrag a:
+Copy %WINDIR%\emm3*.* a:
+</PRE>
+<BP>
+След което поправяме Config.sys така:
+<PRE>
+[menu]
+menuitem=CD,   Start computer with CD-ROM support.
+menuitem=NOCD, Start computer without CD-ROM support.
+menuitem=HELP, View the Help file.
+menudefault=CD,30
+menucolor=7,0
+
+[NOCD]
+device=himem.sys /testmem:off
+device=EMM386.exe NOEMS X=CE00-CEFF
+dos=high,umb
+
+[CD]
+include=NOCD
+devicehigh /L:2,4080 =oakcdrom.sys /D:mscd001
+
+[HELP]
+include=NOCD
+
+[COMMON]
+files=10
+buffers=10
+stacks=9,256
+devicehigh=ramdrive.sys /E 2048
+lastdrive=z
+</PRE>
+<BP>
+Това вече дава Largest executable program size 624K (WOW!!!)
+<HR><P>
+2. На дискетата има достатъчно място да я направим "Почти трепач". Но за целта трябва да
+имаме купен Norton Commander 5, незаконният софтуер е нещо много лошо! Та ако сме си
+купили NC5, правим на дискетата фолдер NC и копираме в него:
+<PRE>
+Nc.exe
+Nc.ini
+Nc.msg
+Ncedit.exe
+Ncedit.msg
+Ncmain.exe
+</PRE>
+След което дописваме един ред в Autoexec.bat, за да се копират файловете на NC5 в
+RAM диска и следователно да са достъпни и след смяна на CD-то или дискетата. Под реда
+<PRE>
+copy readme.txt %RAMD%:\ > NUL
+</PRE>
+добавяме: <BR>
+<PRE>
+copy nc\*.* %RAMD%:\ > NUL
+</PRE>
+Това е! Само да отбележа, че докато пишех това, направих една дискета точно по рецептата,
+която ви предлагам.<P>
+Моят сайт по принцип не е с линкове. Но има едно място, от което съм наточил програми и
+указания и съм си свършил работа, и даже си извадих поука - прави сайт само ако наистина
+имаш какво да кажеш. Провери всичко и го опиши така, че нормално интелигентен човек да може
+да си сърши работа. <B>Там има безплатна, портвана от Линукс конзолна записвачка правеща
+Bootable и MultiBootable CD-та.</B> При това не само с 8.3 имена. Автора е Bart Lagerweij
+и е пич отвсякъде.
+</TD></TR>
+<TR HEIGHT=30><TD>
+<A href="http://www.nu2.nu/bootcd/"> http://www.nu2.nu/bootcd/<A>
+<P><HR>
+</TD></TR>
+<TR HEIGHT=40><TD>
+<P>
+<A href="../na4alo.htm">^ начало на сайта ^</A>
+&nbsp;&nbsp;
+
+<A href="div1.htm#gyuvech2">меню "Още гювечи от Инжинера" --></A>
+&nbsp;&nbsp;&nbsp;
+
+<HR></TD></TR>
+</TABLE>
+
+<table ALIGN=CENTER width="85%"><tr>
+<td>
+
+<!-- Web Counter code start -->
+<font size=1><script type="text/javascript" language="javascript"><!--
+_d=document; _n=navigator; _t=new Date(); function t() { _d.write(
+"<img src=\"http://counter.search.bg/cgi-bin/c?_id=divotii2&_z=0&_r="+
+_r+"&_c="+_c+"&_j="+_j+"&_t="+(_t.getTimezoneOffset())+"&_k="+_k+
+"&_l="+escape(_d.referrer)+"\" width=70 height=15 "+
+"border=0>");} _c="0"; _r="0"; _j="U"; _k="U"; _d.cookie="_c=y";
+_d.cookie.length>0?_k="Y":_k="N";//--></script>
+<script type="text/javascript" language="javascript1.2"><!--
+_b=screen; _r=_b.width; _n.appName!="Netscape"?_c=_b.colorDepth : _c=_b.pixelDepth;
+_n.javaEnabled()?_j="Y":_j="N";//--></script>
+<a href="http://counter.search.bg/cgi-bin/s?_id=divotii2"
+target="_top"><script type="text/javascript" language="javascript"><!--
+t(); //--></script><noscript><img width=70 height=15 border=0 alt=""
+src="http://counter.search.bg/cgi-bin/c?_id=divotii2&amp;_z=0"></noscript></a></font>
+<!-- Web Counter code end -->
+
+&nbsp;&nbsp;
+
+<!--Start FreeCounter code! -->
+<script language="javascript">
+
+var r=document.referrer
+var bv=navigator.appVersion
+if(navigator.appName=="Microsoft Internet Explorer"){pos=bv.lastIndexOf('.');bv=bv.substring(pos-1,bv.length)}
+bv=parseFloat(bv)
+var n=escape(navigator.appName+' '+bv)
+var p=escape(navigator.platform)
+var sw=screen.width+'x'+screen.height
+var sd=screen.colorDepth
+document.write('<a href=http://www.freecount.co.uk/counter/t-stats.php?i=775 target=new><img src=http://www.freecount.co.uk/counter/counter.php?i=775&r='+r+'&n='+n+'&p='+p+'&sw='+sw+'&sd='+sd+' border=0></a>')
+
+</script>
+<!--End FreeCounter code! -->
+</td>
+<td><div align="left"><small>написано на 03 Януари 2002</small></div></td>
+<td width="5%"></td>
+<td><small>корекция на 03 Януари 2002</small></td>
+</tr>
+</table>
+
+
+</FONT>
+</body>
+
+<!-- Mirrored on 3 Nov 2009 from free.hit.bg/injinera/divotii/div2.htm by HTTrack Website Copier/3.x [XR&CO'2006], Tue, 03 Nov 2009 13:26:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=WINDOWS-1251"><!-- /Added by HTTrack -->
+</html>
